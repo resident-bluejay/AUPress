@@ -23,6 +23,7 @@ public class BookList {
     //filename
     private static final String FILENAME = "books.json";
 
+
     private JSONFileReader mJSONFileReader;
 
     private BookList (Context appContext) {
@@ -34,6 +35,7 @@ public class BookList {
             //get books from assets
             mBooks = mJSONFileReader.loadJSONFromAsset();
         } catch (Exception exception) {
+            mBooks = new ArrayList<Book>();
             Log.e(TAG, "Book list not found?");
         }
     }

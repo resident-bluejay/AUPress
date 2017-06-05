@@ -36,9 +36,7 @@ public class BookListFragment extends ListFragment {
         View v = inflater.inflate(R.layout.fragment_book_list, container, false);
 
         //ListView
-        //ListView listView = (ListView) v.findViewById(android.R.id.list);
-        //allow user to select multiple bugs in the list
-        //li
+        ListView listView = (ListView) v.findViewById(android.R.id.list);
 
         return v;
     }
@@ -50,8 +48,8 @@ public class BookListFragment extends ListFragment {
         mBooks = BookList.getInstance(getActivity()).getBooks();
 
         //adapter?
-        //BookAdapter adapter = new BookAdapter(mBooks);
-       // setListAdapter(adapter);
+        BookAdapter adapter = new BookAdapter(mBooks);
+        setListAdapter(adapter);
     }
 
     /*@Override
@@ -63,7 +61,7 @@ public class BookListFragment extends ListFragment {
 
     public void onResume() {
         super.onResume();
-        //((BookAdapter)getListAdapter()0.notifyDataSetChanged();
+        //((BookAdapter)getListAdapter().notifyDataSetChanged();
     }
 
     //book adapter
@@ -114,7 +112,7 @@ public class BookListFragment extends ListFragment {
 
     //private Callbacks mCallbacks;
 
-    @Override
+   /* @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         mCallbacks = (Callbacks)context;
@@ -128,6 +126,6 @@ public class BookListFragment extends ListFragment {
 
     public void updateUI() {
         ((BookAdapter)getListAdapter()).notifyDataSetChanged();
-    }
+    }*/
 
 }
