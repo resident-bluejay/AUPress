@@ -1,13 +1,8 @@
 package edu.andrews.kundani.aupress;
 
-import android.app.ActionBar;
-import android.app.SearchManager;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,31 +11,31 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.content.Intent;
+
 import java.util.ArrayList;
 
 import static android.R.id.list;
 
+/**
+ * Created by resident_bluejay on 8/16/17.
+ */
 
-public class BookSearchFragment extends ListFragment {
+public class AuthorSearchFragment extends ListFragment {
     //list_layout of bugs
     private ArrayList<Book> mBooks;
 
-    private Callbacks mCallbacks;
+    private BookSearchFragment.Callbacks mCallbacks;
 
     /**Tag to log messages**/
-    public static final String TAG = "BookSearchFragment";
+    public static final String TAG = "AuthorSearchFragment";
 
     //search query
     String query;
 
-    public BookSearchFragment() {
+    public AuthorSearchFragment() {
         //constructor
     }
 
@@ -50,15 +45,15 @@ public class BookSearchFragment extends ListFragment {
 
 
         //get search word from the main activity
-        query = getActivity().getIntent().getStringExtra("query");
-        doSearch(query);
+        // query = getActivity().getIntent().getStringExtra("query");
+        //doSearch(query);
 
         //set up action bar
         setHasOptionsMenu(true);
     }
 
     public void doSearch(String q){
-        mBooks = BookList.getInstance(getActivity()).getResults(q);
+        mBooks = BookList.getInstance(getActivity()).getAuthorResults(q);
 
         //adapter
         BookAdapter adapter = new BookAdapter(mBooks);
@@ -68,14 +63,14 @@ public class BookSearchFragment extends ListFragment {
 
     /**Action bar**/
     @Override
-    public void onCreateOptionsMenu(Menu menu,MenuInflater inflater ) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater ) {
         super.onCreateOptionsMenu(menu, inflater);
-       inflater.inflate(R.menu.options_menu, menu);
+        inflater.inflate(R.menu.options_menu, menu);
 
         MenuItem searchItem = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         //hint
-        searchView.setQueryHint("Search books");
+        searchView.setQueryHint("Search authors");
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -85,10 +80,10 @@ public class BookSearchFragment extends ListFragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                Log.i(TAG, "User searched for"+ newText);
+                Log.i(TAG, "User searched for an author named"+ newText);
                 return false;
-                }
-            });
+            }
+        });
     }
 
     /**book adapter**/
@@ -143,26 +138,4 @@ public class BookSearchFragment extends ListFragment {
 
         return v;
     }
-
-    public void onResume() {
-        super.onResume();
-        //((BookAdapter)getListAdapter().notifyDataSetChanged();
-    }
-
-    public interface Callbacks {
-        void onBookSelected(Book book);
-    }
-
-    /**@Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mCallbacks = (Callbacks)context;
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mCallbacks = null;
-    }**/
-
 }

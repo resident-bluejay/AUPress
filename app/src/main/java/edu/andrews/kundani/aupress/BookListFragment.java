@@ -1,7 +1,6 @@
 package edu.andrews.kundani.aupress;
 
 import android.support.v4.app.ListFragment;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,18 +9,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import junit.framework.Test;
-
 import java.util.ArrayList;
-import java.util.List;
-
-/**
- * Created by resident_bluejay on 6/4/17.
- */
 
 public class BookListFragment extends ListFragment {
 
-    //list of bugs
+    //list_layout of bugs
     private ArrayList<Book> mBooks;
 
     private Callbacks mCallbacks;
@@ -30,10 +22,53 @@ public class BookListFragment extends ListFragment {
         //constructor
     }
 
+    //book adapter
+    private class BookAdapter extends ArrayAdapter<Book> {
+        public BookAdapter (ArrayList<Book> books) {
+            super(getActivity(), 0, books);
+        }
+
+        //view for individual book goes here...
+        public View getView(int position, View convertView, ViewGroup parent) {
+            //things
+            if(null == convertView) {
+                convertView = getActivity().getLayoutInflater().
+                        inflate(R.layout.list_item_book, null);
+            }
+
+            //configure view for book
+            Book book = getItem(position);
+
+            //set title
+            TextView titleTextView =
+                    (TextView) convertView.findViewById(R.id.book_list_item_titleTextView);
+            titleTextView.setText(book.getBookTitle());
+
+            //set author
+            TextView authorTextView =
+                    (TextView) convertView.findViewById(R.id.book_list_item_authorTextView);
+            authorTextView.setText(book.getAuthor());
+
+            //set ISBN
+            TextView isbnTextView =
+                    (TextView) convertView.findViewById(R.id.book_list_item_isbnTextView);
+            isbnTextView.setText(book.getISBN());
+
+            //set page number
+            TextView pageNumTextView =
+                    (TextView) convertView.findViewById(R.id.book_list_item_priceTextView);
+            pageNumTextView.setText("$" + book.getListPrice());
+
+            //return the view
+            return convertView;
+        }
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_book_list, container, false);
+        //View v = inflater.inflate(R.layout.list_layout, container, false);
 
         //ListView
         ListView listView = (ListView) v.findViewById(android.R.id.list);
@@ -62,48 +97,6 @@ public class BookListFragment extends ListFragment {
     public void onResume() {
         super.onResume();
         //((BookAdapter)getListAdapter().notifyDataSetChanged();
-    }
-
-    //book adapter
-    private class BookAdapter extends ArrayAdapter<Book> {
-        public BookAdapter (ArrayList<Book> books) {
-            super(getActivity(), 0, books);
-        }
-
-        //view for individual book goes here...
-        public View getView(int position, View convertView, ViewGroup parent) {
-            //things
-            if(null == convertView) {
-                convertView = getActivity().getLayoutInflater().
-                        inflate(R.layout.list_item_book, null);
-            }
-
-            //configure view for book
-            Book book = getItem(position);
-
-            //set title
-            TextView titleTextView =
-                    (TextView) convertView.findViewById(R.id.book_list_item_titleTextView);
-            titleTextView.setText(book.getTitle());
-
-            //set author
-            TextView authorTextView =
-                    (TextView) convertView.findViewById(R.id.book_list_item_authorTextView);
-            authorTextView.setText(book.getAuthor());
-
-            //set ISBN
-            TextView isbnTextView =
-                    (TextView) convertView.findViewById(R.id.book_list_item_isbnTextView);
-            isbnTextView.setText(book.getISBN());
-
-            //set page number
-            TextView pageNumTextView =
-                    (TextView) convertView.findViewById(R.id.book_list_item_pageNumTextView);
-            pageNumTextView.setText(book.getPageNumber());
-
-            //return the view
-            return convertView;
-        }
     }
 
     public interface Callbacks {

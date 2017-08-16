@@ -9,6 +9,7 @@ import org.json.JSONObject;
 import org.json.JSONTokener;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,7 +21,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 /**
- * Puts book information in JSON format?????
+ * Reads book information in JSON format?????
  */
 public class JSONFileReader extends AppCompatActivity{
 
@@ -39,19 +40,21 @@ public class JSONFileReader extends AppCompatActivity{
         BufferedReader reader = null;
 
         try {
-            //open book.json file
-            //InputStream stream = mContext.openFileInput(mFilename);
-            //reader = new BufferedReader(new InputStreamReader(stream));
-            reader = new BufferedReader(new InputStreamReader(getAssets().open(
-                    "books.json")));
+            //open sample.json file
+            reader = new BufferedReader(new InputStreamReader(mContext.getAssets().open(
+                    "sample.json"), "UTF-8"));
+
             StringBuilder jsonString = new StringBuilder();
             String line = null;
+
             while ((line = reader.readLine()) != null) {
                 //next line
                 jsonString.append(line);
             }
 
-            JSONArray jsonArray = (JSONArray) new JSONTokener(jsonString.toString()).nextValue();
+            //read json object as string
+            JSONObject jsonObject = (JSONObject) new JSONTokener(jsonString.toString()).nextValue();
+            JSONArray jsonArray = jsonObject.getJSONArray("Sample");
             for (int i = 0; i < jsonArray.length(); i++){
                 bookList.add(new Book(jsonArray.getJSONObject(i)));
 

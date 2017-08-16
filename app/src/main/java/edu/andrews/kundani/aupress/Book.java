@@ -18,10 +18,13 @@ public class Book {
     private String mAuthor;
 
     //book ISBN number
-    private int mISBN;
+    private String mISBN;
 
     //page number
-    private int mPageNumber;
+    private double mListPrice;
+
+    //keywords
+    private String mKeywords;
 
 
     public Book () {
@@ -34,13 +37,13 @@ public class Book {
      * @param title         Resource id for book's title
      * @param author        Resource id for book's author
      * @param isbn          Resource id for book ISBN
-     * @param pageNumber    Resource id for page number
+     * @param listPrice    Resource id for book price
      */
-    public Book(String title, String author, int isbn, int pageNumber) {
+    public Book(String title, String author, String isbn, int listPrice) {
         mTitle = title;
         mAuthor = author;
         mISBN = isbn;
-        mPageNumber = pageNumber;
+        mListPrice = listPrice;
     }
 
     //setters
@@ -52,16 +55,16 @@ public class Book {
         mAuthor = author;
     }
 
-    public void setISBN(int isbn) {
+    public void setISBN(String isbn) {
         mISBN = isbn;
     }
 
-    public void setPageNumber(int pageNumber) {
-        mPageNumber = pageNumber;
+    public void setListPrice(double listPrice) {
+        mListPrice = listPrice;
     }
 
     //getters
-    public String getTitle() {
+    public String getBookTitle() {
         return mTitle;
     }
 
@@ -69,28 +72,32 @@ public class Book {
         return mAuthor;
     }
 
-    public int getISBN() {
+    public String getISBN() {
         return mISBN;
     }
 
-    public int getPageNumber() {
-        return mPageNumber;
+    public double getListPrice() {
+        return mListPrice;
+    }
+
+    public String getKeywords() {
+        return mKeywords;
     }
 
     public UUID getUUID() {
         return mUUID;
     }
 
-    /**JSON attribute for bug id */
-    private static final String JSON_ID = "id";
-    /** JSON sttribute for the bug title */
+    /** JSON attribute for the book title */
     private static final String JSON_TITLE = "title";
-    /** JSON attribute for the bug's description */
-    private static final String JSON_AUTHOR = "author";
-    /** JSON attribute for bug date */
-    private static final String JSON_ISBN = "ISBN";
-    /** JSON attribute for bug solved status */
-    private static final String JSON_PAGE_NUMBER = "pages";
+    /** JSON attribute for the book's author */
+    private static final String JSON_AUTHOR = "author(s)/editor(s)";
+    /** JSON attribute for book isbn */
+    private static final String JSON_ISBN = "isbn";
+    /** JSON attribute for book list_layout price */
+    private static final String JSON_LIST_PRICE = "list_price";
+    /**JSON attribute for key search words */
+    private static final String JSON_KEYWORDS = "keywords";
 
     /**
      * Initialize a new bug from a JSON object
@@ -98,21 +105,24 @@ public class Book {
      * @throws JSONException
      */
     public Book(JSONObject json) throws JSONException {
-        mUUID = UUID.fromString(json.getString(JSON_ID));
+       // mUUID = UUID.fromString(json.getString(JSON_ID));
         mTitle = json.getString(JSON_TITLE);
         mAuthor = json.getString(JSON_AUTHOR);
-        mISBN = json.getInt(JSON_ISBN);
-        mPageNumber = json.getInt(JSON_PAGE_NUMBER);
+        mISBN = json.getString(JSON_ISBN);
+        mListPrice = json.getDouble(JSON_LIST_PRICE);
+        mKeywords = json.getString(JSON_KEYWORDS);
     }
 
     public static JSONObject toJSON (Book book){
         try {
             //create a new JSON Object
             JSONObject JSONObj = new JSONObject();
-            JSONObj.put("title", book.getTitle());
-            JSONObj.put("author", book.getAuthor());
-            JSONObj.put("ISBN", book.getISBN());
-            JSONObj.put("Pages", book.getPageNumber());
+            JSONObject bookObject = JSONObj.getJSONObject("Sample");
+            bookObject.put("title", book.getBookTitle());
+            bookObject.put("author(s)/editor(s)", book.getAuthor());
+            bookObject.put("isbn", book.getISBN());
+            bookObject.put("list_price", book.getListPrice());
+            bookObject.put("keywords", book.getKeywords());
 
             //return the JSON Object
             return JSONObj;

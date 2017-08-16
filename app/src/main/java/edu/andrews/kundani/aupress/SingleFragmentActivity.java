@@ -1,9 +1,6 @@
 package edu.andrews.kundani.aupress;
 
-/**
- * Created by resident_bluejay on 2/22/17.
- */
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
