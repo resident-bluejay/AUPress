@@ -8,31 +8,87 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
-        <activity android:name=".BookListActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-
-        <!--activity
+        <activity
             android:name=".LaunchActivity"
-            android:theme="@style/SplashTheme">
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity-->
+        </activity>
+
+        <!-- titles titles titles-->
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+                  <!--android:launchMode="singleTop"-->
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.andrews.kundani.aupress.MainActivity" />
+        </activity>
+
+        <!-- chaos is a ladder -->
+
+        <activity android:name=".BookListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.default_searchable"
+                       android:value=".SearchActivity" />
+        </activity>
+
+        <!-- the code is broken and full of errors -->
+
+        <activity android:name=".SearchActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                       android:resource="@xml/searchable"/>
+        </activity>
+
+        <!-- let's see what their words are worth -->
+
+        <activity android:name=".BookSearchActivity">
+                  <!--android:launchMode="singleTop"-->
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- the unburnt, the breaker of chains -->
+
+        <activity android:name=".BookDetails">
+                  <!--android:launchMode="singleTop"-->
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- you make brooding look good -->
+        <activity android:name=".TitleSearchActivity">
+            <!--android:launchMode="singleTop"-->
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- explosions in the sky, your hand in mine -->
+        <activity android:name=".AuthorSearchActivity">
+            <!--android:launchMode="singleTop"-->
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
     </application>
 
 </manifest>

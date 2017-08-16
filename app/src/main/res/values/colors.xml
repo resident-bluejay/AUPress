@@ -4,4 +4,10 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
+    <color name="logo_red">#640811</color>
+    <color name="off_white">#faebd7</color>
+    <color name="au_blue">#0067ac</color>
+    <color name="au_gold">#b38808</color>
+    <color name="alt_gold">#9d8958</color>
+    <color name="light_blue">#daecf7</color>
 </resources>

@@ -51,10 +51,10 @@
         app:layout_constraintTop_toBottomOf="@+id/book_list_item_authorTextView"/>
 
     <TextView
-        android:text="Page #"
+        android:text="Price"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:id="@+id/book_list_item_pageNumTextView"
+        android:id="@+id/book_list_item_priceTextView"
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"

@@ -1,0 +1,606 @@
+{
+  "Sample": [
+    {
+      "isbn": "978-1-883925-19-2",
+      "title": "Adventism in America: A History, Revised Edition",
+      "author(s)/editor(s)": "Gary Land",
+      "keywords": "Adventism America history",
+      "list_price": 16.99
+    },
+    {
+      "isbn": "978-1-883925-19-2",
+      "title": "Adventism in America: A History, Revised Edition",
+      "author(s)/editor(s)": "Gary Land",
+      "keywords": "Adventism America history",
+      "list_price": 16.99
+    },
+    {
+      "isbn": "978-1-936337-01-9",
+      "title": "Andrews Study Bible NKJV (Bonded Leather Black)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 69.99
+    },
+    {
+      "isbn": "978-1-936337-07-1",
+      "title": "Andrews Study Bible NKJV (Bonded Leather Burgundy)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 69.99
+    },
+    {
+      "isbn": "978-1-936337-03-3",
+      "title": "Andrews Study Bible NKJV (Genuine Leather Black)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 89.99
+    },
+    {
+      "isbn": "978-1-936337-04-0",
+      "title": "Andrews Study Bible NKJV (Genuine Leather Burgundy)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 89.99
+    },
+    {
+      "isbn": "978-1-936337-00-2",
+      "title": "Andrews Study Bible NKJV (Hardcover)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 44.99
+    },
+    {
+      "isbn": "978-1-936337-11-8",
+      "title": "Andrews Study Bible NKJV (Large Print)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 49.99
+    },
+    {
+      "isbn": "978-1-936337-05-7",
+      "title": "Andrews Study Bible NKJV (Premium Fine Leather Black)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 119.99
+    },
+    {
+      "isbn": "978-1-936337-08-8",
+      "title": "Andrews Study Bible NKJV (Synthetic Leather Brown/Taupe)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 69.99
+    },
+    {
+      "isbn": "978-1-936337-09-5",
+      "title": "Andrews Study Bible NKJV (Synthetic Leather Navy/Gray)",
+      "author(s)/editor(s)": "Jon L. Dybdahl",
+      "keywords": "Andrews Study Bible Scriptures commentary concordance",
+      "list_price": 69.99
+    },
+    {
+      "isbn": "978-1-883925-10-9",
+      "title": "Apostolic Succession: In the Writings of Yves Congar & Oscar Cullmann",
+      "author(s)/editor(s)": "Carlos A. Steger",
+      "keywords": "Apostolic Succession Congar Cullmann",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-93-2",
+      "title": "Biology",
+      "author(s)/editor(s)": "H. Thomas Goodwin",
+      "keywords": "Biology",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-940980-14-0",
+      "title": "Christ's Object Lessons",
+      "author(s)/editor(s)": "Ellen G. White",
+      "keywords": "Christ Object Lessons Ellen White",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-68-0",
+      "title": "Christian Worldview and Mental Health, A",
+      "author(s)/editor(s)": "Carlos Fayard, Barbara Couden Hernandez, Bruce Anderson, and George T. Harding IV",
+      "keywords": "Christian Worldview Mental Health",
+      "list_price": 34.99
+    },
+    {
+      "isbn": "978-0-943872-70-4",
+      "title": "Clark H. Pinnock on Biblical Authority: An Evolving Position",
+      "author(s)/editor(s)": "Ray Roennfeldt",
+      "keywords": "Clark Pinnock Biblical Authority",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-34-5",
+      "title": "College Faith: 150 Christian Leaders and Educators Share Faith Stories from Their Student Days",
+      "author(s)/editor(s)": "Ronald Alan Knott",
+      "keywords": "College Faith",
+      "list_price": 5.99
+    },
+    {
+      "isbn": "978-1-883925-45-1",
+      "title": "College Faith 2: 150 Christian Leaders and Educators Share Faith Stories from Their Student Days",
+      "author(s)/editor(s)": "Ronald Alan Knott",
+      "keywords": "College Faith",
+      "list_price": 5.99
+    },
+    {
+      "isbn": "978-1-883925-53-6",
+      "title": "College Faith 3: 150 Christian Leaders and Educators Share Faith Stories from Their Student Days",
+      "author(s)/editor(s)": "Ronald Alan Knott",
+      "keywords": "College Faith",
+      "list_price": 5.99
+    },
+    {
+      "isbn": "978-0-943872-26-1",
+      "title": "Concordance of the Isin-Larsa Year Names",
+      "author(s)/editor(s)": "Alfred H. Kromholz, Marcel Sigrist",
+      "keywords": "Concordance Isin Larsa Year Names",
+      "list_price": 29.99
+    },
+    {
+      "isbn": "978-1-883925-64-2",
+      "title": "Contemporary Plant Systematics - 4th edition",
+      "author(s)/editor(s)": "Dennis W. Woodland",
+      "keywords": "plant systematics science classification",
+      "list_price": 48.99
+    },
+    {
+      "isbn": "978-1-883925-60-4",
+      "title": "Context and Continuity: The Korean Adventist Church in North America and Its Future Generations",
+      "author(s)/editor(s)": "Won K. Yoon",
+      "keywords": "Korean Adventist church ethnic America Asian religion immigrant ethnicity",
+      "list_price": 21.99
+    },
+    {
+      "isbn": "978-0-943872-41-4",
+      "title": "Daniel: Vision of the End",
+      "author(s)/editor(s)": "Jacques B. Doukhan",
+      "keywords": "Daniel Vision Doukhan",
+      "list_price": 15.99
+    },
+    {
+      "isbn": "978-1-940980-15-7",
+      "title": "Earthly Shadows, Heavenly Realities: Temple/Sanctuary Cosmology in Ancient Near Eastern, Biblical, and Early Jewish Literature",
+      "author(s)/editor(s)": "Kim Papaioannou and Ioannis Giantzaklidis",
+      "keywords": "Earthly Shadows Heavenly Realities Temple Sanctuary Cosmology Ancient Near Eastern Biblical Jewish Literature",
+      "list_price": 27.99
+    },
+    {
+      "isbn": "978-1-940980-12-6",
+      "title": "Educating for Eternity: A Seventh-day Adventist Philiosphy of Education",
+      "author(s)/editor(s)": "George R. Knight",
+      "keywords": "Educating Eternity Seventh-day Adventist Philiosphy Education",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-940980-11-9",
+      "title": "Faith, Reason, and Earth History - 3rd edition: A Paradigm of Earth and Biological Origins by Intelligent Design",
+      "author(s)/editor(s)": "Leonard R. Brand and Arthur Chadwick",
+      "keywords": "faith reason earth science geology creation evolution naturalism origin microevolution intervention sociobiology megaevolution",
+      "list_price": 49.99
+    },
+    {
+      "isbn": "978-0-943872-45-2",
+      "title": "Foundations of the Seventh-day Adventist Message & Mission",
+      "author(s)/editor(s)": "P. Gerard Damsteegt",
+      "keywords": "Foundations adventist church mission",
+      "list_price": 19.99
+    },
+    {
+      "isbn": "978-1-940980-09-6",
+      "title": "Genesis Creation Account and Its Reverberations in the Old Testament, The",
+      "author(s)/editor(s)": "Gerald A. Klingbeil",
+      "keywords": "Creation, Genesis, Old Testament",
+      "list_price": 24.99
+    },
+    {
+      "isbn": "978-0-943872-15-5",
+      "title": "Hesban 02:  Environmental Foundations: Studies of Climatical, Geological, Hydrological, & Phytological Cond. in Hesban & Vicinity",
+      "author(s)/editor(s)": "Oystein S. LaBianca",
+      "keywords": "HESBAN Environment archaeology LaBianca",
+      "list_price": 45.99
+    },
+    {
+      "isbn": "978-0-943872-17-9",
+      "title": "Hesban 03:  Historical Foundations: Studies of Literary References to Hesban & Vicinity",
+      "author(s)/editor(s)": "Leona G. Running and Lawrence T. Geraty",
+      "keywords": "HESBAN Historical foundations archaeology",
+      "list_price": 45.99
+    },
+    {
+      "isbn": "978-0-943872-16-2",
+      "title": "Hesban 05:  Archaeological Survey of the Hesban Region: Catalogue of Sites and Characterization of Periods",
+      "author(s)/editor(s)": "Robert Ibach",
+      "keywords": "HESBAN Archaeological Survey archaeology",
+      "list_price": 45.99
+    },
+    {
+      "isbn": "978-0-943872-20-9",
+      "title": "Hesban 07:  Hellenistic & Roman Strata: A Study of the Stratigraphy of Tell Hesban from the 2nd Cent. B.C. to the 4th Cent. A.D.",
+      "author(s)/editor(s)": "Larry A. Mitchel",
+      "keywords": "HESBAN Hellenistic Stratigraphy archaeology",
+      "list_price": 45.99
+    },
+    {
+      "isbn": "978-0-943872-24-7",
+      "title": "Hesban 11:  Ceramic Finds: Typological and Technological Studies of the Pottery Remains from Tell Hesban and Vicinity",
+      "author(s)/editor(s)": "James A. Sauer and Larry G. Herr",
+      "keywords": "HESBAN Ceramic Finds",
+      "list_price": 84.99
+    },
+    {
+      "isbn": "978-0-943872-28-5",
+      "title": "Hesban 12:  Small Finds: Studies of the Bone, Iron, Glass, Figurines, and Stone Objects from Tell Hesban and Vicinity",
+      "author(s)/editor(s)": "Paul J. Ray, Jr.",
+      "keywords": "HESBAN Small Finds",
+      "list_price": 74.99
+    },
+    {
+      "isbn": "978-1-883925-51-2",
+      "title": "Historical Sketches of the Foreign Missions of the Seventh-day Adventists",
+      "author(s)/editor(s)": "George R. Knight",
+      "keywords": "Adventist Knight mission White",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-70-3",
+      "title": "Homosexuality, Marriage, and the Church: Biblical, Counseling, and Religious Liberty Issues",
+      "author(s)/editor(s)": "Roy E. Gane, Nicholas P. Miller, H. Peter Swanson",
+      "keywords": "Homosexuality Marriage Church Biblical Counseling Religious Liberty Issues",
+      "list_price": 24.99
+    },
+    {
+      "isbn": "978-1-883925-31-4",
+      "title": "I Used to Be Perfect: A Study of Sin and Salvation, 2nd Edition",
+      "author(s)/editor(s)": "George R. Knight",
+      "keywords": "perfect perfection sin law salvation",
+      "list_price": 6.99
+    },
+    {
+      "isbn": "978-1-883925-57-4",
+      "title": "In Granite or Ingrained?: What the Old and New Covenants Reveal about the Gospel, the Law, and the Sabbath",
+      "author(s)/editor(s)": "Skip MacCarty",
+      "keywords": "covenants law gospel sabbath",
+      "list_price": 19.99
+    },
+    {
+      "isbn": "978-1-883925-58-1",
+      "title": "In Granite or Ingrained?: Study Guide for Individuals and Small Groups",
+      "author(s)/editor(s)": "Skip MacCarty, Esther Knott",
+      "keywords": "covenants law gospel sabbath study guide",
+      "list_price": 8.99
+    },
+    {
+      "isbn": "978-0-943872-94-0",
+      "title": "Isin Year Names",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Isin Year Names king",
+      "list_price": 29.99
+    },
+    {
+      "isbn": "978-0-943872-14-8",
+      "title": "Israel of God in Prophecy, The",
+      "author(s)/editor(s)": "Hans K. Larondelle",
+      "keywords": "Israel God Prophecy Testament dispensation",
+      "list_price": 15.99
+    },
+    {
+      "isbn": "978-1-883925-61-1",
+      "title": "Issues and Alternatives in Educational Philosophy: 4th Edition",
+      "author(s)/editor(s)": "George R. Knight",
+      "keywords": "Issues education philosophy teacher survey theory",
+      "list_price": 19.99
+    },
+    {
+      "isbn": "978-1-883925-62-8",
+      "title": "Judging the Sabbath: Discovering What Can't Be Found in Colossians 2:16",
+      "author(s)/editor(s)": "Ron du Preez",
+      "keywords": "Sabbath seventh day Colossians 2:16 du Preez Sabbatarian ceremonial",
+      "list_price": 19.99
+    },
+    {
+      "isbn": "978-1-883925-72-7",
+      "title": "La revelación de Jesucristo: Comentario del libro del Apocalipsis",
+      "author(s)/editor(s)": "Ranko Stefanovic",
+      "keywords": "Revelacion Jesucristo Comentario libro Apocalipsis",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-0-943872-54-4",
+      "title": "Larsa Year Names",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Larsa Year Names assyriological king",
+      "list_price": 29.99
+    },
+    {
+      "isbn": "978-1-883925-42-0",
+      "title": "Life Incidents",
+      "author(s)/editor(s)": "James White",
+      "keywords": "Adventist White Library Miller",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-65-9",
+      "title": "Lost Meaning of the Seventh Day, The",
+      "author(s)/editor(s)": "Sigve K. Tonstad",
+      "keywords": "Sabbath Seventh",
+      "list_price": 29.99
+    },
+    {
+      "isbn": "978-0-943872-96-4",
+      "title": "Madaba Plains Project 1: The 1984 Season at Tell el-Umeiri & Vicinity & Subsequent Studies",
+      "author(s)/editor(s)": "Lawrence T. Geraty, Larry G. Herr, Ã˜ystein S. Labianca, Randall W. Younker",
+      "keywords": "Madaba Plains 1984 Tell el-Umeiri archaeology stratigraphy",
+      "list_price": 79.99
+    },
+    {
+      "isbn": "978-0-943872-98-8",
+      "title": "Madaba Plains Project 2: The 1987 Season at Tell el-Umeiri & Vicinity & Subsequent Studies",
+      "author(s)/editor(s)": "Larry G. Herr, Lawrence T. Geraty, Ã˜ystein S. Labianca, Randall W. Younker",
+      "keywords": "Madaba Plains 1987 archaeology Tell el-Umeiri stratigraphy",
+      "list_price": 79.99
+    },
+    {
+      "isbn": "978-0-943872-71-1",
+      "title": "Madaba Plains Project 3: The 1989 Season at Tell el-Umeiri and Vicinity",
+      "author(s)/editor(s)": "Larry G. Herr, Lawrence T. Geraty, Ã˜ystein S. Labianca, Randall W. Younker",
+      "keywords": "Madaba Plains 1989 Tell el-Umeiri archaeology hinterland excavation",
+      "list_price": 79.99
+    },
+    {
+      "isbn": "978-1-883925-26-0",
+      "title": "Madaba Plains Project 4: The 1992 Season at Tall al-'Umayri and Subsequent Studies",
+      "author(s)/editor(s)": "Larry G. Herr, Douglas R. Clark, Lawrence T. Geraty, Randall W. Younker, Ã˜ystein S. LaBianca",
+      "keywords": "Madaba Plains archaeology Tall al-'Umayri excavation",
+      "list_price": 79.99
+    },
+    {
+      "isbn": "978-1-883925-81-9",
+      "title": "Madaba Plains Project 6: The 1996 and 1998 Seasons at Tall al-'Umayri and Subsequent Studies",
+      "author(s)/editor(s)": "Larry G. Herr, Douglas R. Clark, Lawrence T. Geraty, Randall W. Younker, Ã˜ystein S. LaBianca",
+      "keywords": "Madaba Plains archaeology excavation 'Umayri tall",
+      "list_price": 89.99
+    },
+    {
+      "isbn": "978-1-883925-11-6",
+      "title": "Microstructural Analysis of Revelation 4-11",
+      "author(s)/editor(s)": "Ekkehardt Müller",
+      "keywords": "Revelation microstructure dissertation",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "949-2-250356-5",
+      "title": "Midnight Cry! (DVD), The: William Miller and the End of the World",
+      "author(s)/editor(s)": "T. N. Mohan, Producer",
+      "keywords": "Midnight Cry William Miller film documentary movie DVD America Adventist history 1844",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-0-943872-25-4",
+      "title": "Neo-Sumerian Account Texts 1",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Neo-Sumerian cuneiform archaeology",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-0-943872-32-2",
+      "title": "Neo-Sumerian Account Texts 2",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Neo-Sumerian archaeology",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-0-943872-31-5",
+      "title": "Neo-Sumerian Account Texts 3",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Neo-Sumerian archaeology cuneiform",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-0-943872-53-7",
+      "title": "Old Babylonian Account Texts 1",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Babylon Babylonian archaeology",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-1-883925-39-0",
+      "title": "Old Babylonian Account Texts 2",
+      "author(s)/editor(s)": "Marcel Sigrist",
+      "keywords": "Babylon Babylonian king archaeology",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-1-883925-48-2",
+      "title": "Our Creator Redeemer: An Introduction to Biblical Covenant Theology",
+      "author(s)/editor(s)": "Hans K. LaRondelle",
+      "keywords": "Creator Redeemer Covenant theology Testament commandment salvation redemption",
+      "list_price": 19.99
+    },
+    {
+      "isbn": "978-1-883925-54-3",
+      "title": "Philosophy and Education: An Introduction in Christian Perspective, 4th Edition",
+      "author(s)/editor(s)": "George R. Knight",
+      "keywords": "Philosophy Education faith Christian",
+      "list_price": 24.99
+    },
+    {
+      "isbn": "978-1-883925-86-4",
+      "title": "Plain Revelation: A Reader's Introduction to the Apocalypse",
+      "author(s)/editor(s)": "Ranko Stefanovic",
+      "keywords": "Plain Revelation Reader Guide Apocalypse Introduction",
+      "list_price": 16.99
+    },
+    {
+      "isbn": "978-1-883925-41-3",
+      "title": "Questions on Doctrine",
+      "author(s)/editor(s)": "George R. Knight",
+      "keywords": "Question Doctrine Adventist Library",
+      "list_price": 29.99
+    },
+    {
+      "isbn": "978-1-883925-16-1",
+      "title": "Reign of God: An Introduction to Christian Theology, 2nd Edition",
+      "author(s)/editor(s)": "Richard Rice",
+      "keywords": "Reign God textbook Adventist theology doctrine religion belief",
+      "list_price": 34.99
+    },
+    {
+      "isbn": "978-1-883925-67-3",
+      "title": "Revelation of Jesus Christ - 2nd Edition: Commentary on the Book of Revelation",
+      "author(s)/editor(s)": "Ranko Stefanovic",
+      "keywords": "Revelation Christ Apocalypse prophecy commentary",
+      "list_price": 39.99
+    },
+    {
+      "isbn": "978-1-940980-02-7",
+      "title": "Scriptural Foundations for Accounting",
+      "author(s)/editor(s)": "Carmelita Troy, LeRoy Ruhupatty",
+      "keywords": "Scriptural Foundations Accounting",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-78-9",
+      "title": "Scriptural Foundations for Business Communication",
+      "author(s)/editor(s)": "Verlyne Starr",
+      "keywords": "Scriptural Foundations Business Communication",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-79-6",
+      "title": "Scriptural Foundations for Management",
+      "author(s)/editor(s)": "Michael E. Cafferky",
+      "keywords": "Scriptural Foundations Management",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-80-2",
+      "title": "Scriptural Foundations for Marketing",
+      "author(s)/editor(s)": "Bruce Wrenn, Harwood Hoover, Jr., Jacquelyn Warwick",
+      "keywords": "Scriptural Foundations Marketing",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-940980-00-3",
+      "title": "Scriptural Foundations for Microeconomics",
+      "author(s)/editor(s)": "Harwood Hoover, Jr.",
+      "keywords": "Scriptural Foundations Microeconomics",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-59-8",
+      "title": "Second Advent History",
+      "author(s)/editor(s)": "Isaac Wellcome",
+      "keywords": "Adventist Millerite Adventism Second Advent Wellcome Church History Land Library",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-90-1",
+      "title": "Servants and Friends: A Biblical Theology of Leadership",
+      "author(s)/editor(s)": "Skip Bell",
+      "keywords": "Servants Friends Biblical Theology Leadership",
+      "list_price": 28.99
+    },
+    {
+      "isbn": "978-0-943872-74-2",
+      "title": "Short Grammar of Biblical Aramaic, A",
+      "author(s)/editor(s)": "Alger F. Johns",
+      "keywords": "Grammar Biblical Aramaic language Jumper",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-43-7",
+      "title": "Short Grammar of Biblical Aramaic: Annotated Answer Key, A",
+      "author(s)/editor(s)": "James N. Jumper",
+      "keywords": "Jumper, Aramaic, Language, Johns",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-55-0",
+      "title": "Sociology: A Seventh-day Adventist Approach for Students and Teachers",
+      "author(s)/editor(s)": "Lionel Matthews",
+      "keywords": "sociology teaching faith learning Matthews",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-940980-14-0",
+      "title": "Steps to Christ: Annotated Anniversary Edition",
+      "author(s)/editor(s)": "Ellen G. White, Denis Fortin",
+      "keywords": "Steps Christ Annotated Anniversary Edition Ellen White",
+      "list_price": 14.99
+    },
+    {
+      "isbn": "978-1-883925-37-6",
+      "title": "Systematic Theology, Vol. 1: Prolegomena",
+      "author(s)/editor(s)": "Norman R. Gulley",
+      "keywords": "Systematic Theology Bible dispensation philosophy",
+      "list_price": 49.99
+    },
+    {
+      "isbn": "978-1-883925-69-7",
+      "title": "Systematic Theology, Vol. 2: God as Trinity",
+      "author(s)/editor(s)": "Norman R. Gulley",
+      "keywords": "Systematic Theology Bible Trinity",
+      "list_price": 49.99
+    },
+    {
+      "isbn": "978-1-883925-71-0",
+      "title": "Systematic Theology, Vol. 3: Creation, Christ, Salvation",
+      "author(s)/editor(s)": "Norman R. Gulley",
+      "keywords": "Systematic Theology Bible Creation Christ Salvation Christology",
+      "list_price": 49.99
+    },
+    {
+      "isbn": "978-1-940980-07-2",
+      "title": "Systematic Theology, Vol. 4: The Church and the Last Things",
+      "author(s)/editor(s)": "Norman R. Gulley",
+      "keywords": "Systematic Theology Bible Church Ecclesiology Last Things Eschatology",
+      "list_price": 62.99
+    },
+    {
+      "isbn": "978-1-883925-28-4",
+      "title": "Teaching History: A Seventh-day Adventist Approach",
+      "author(s)/editor(s)": "Gary Land",
+      "keywords": "Teaching teach History Faith Learning learn Christian",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "978-1-883925-36-9",
+      "title": "Teaching Literature: A Seventh-day Adventist Approach",
+      "author(s)/editor(s)": "Delmer Davis",
+      "keywords": "Teaching teach Literature Seventh-day Adventist Approach",
+      "list_price": 9.99
+    },
+    {
+      "isbn": "",
+      "title": "Temperament Inventory",
+      "author(s)/editor(s)": "Peter Blitchington and Robert J. Cruise",
+      "keywords": "Temperament Inventory",
+      "list_price": 1.75
+    },
+    {
+      "isbn": "",
+      "title": "Temperament Scoring Templates",
+      "author(s)/editor(s)": "Peter Blitchington and Robert J. Cruise",
+      "keywords": "Temperament Scoring Templates",
+      "list_price": 7.99
+    },
+    {
+      "isbn": "978-0-943872-34-6",
+      "title": "Typology in Scripture",
+      "author(s)/editor(s)": "Richard M. Davidson",
+      "keywords": "Typology Scripture",
+      "list_price": 19.99
+    },
+    {
+      "isbn": "978-0-943872-95-7",
+      "title": "Vision of Daniel 8, The",
+      "author(s)/editor(s)": "Samuel Nuñez",
+      "keywords": "Vision Daniel Eight 8",
+      "list_price": 9.99
+    }
+  ]
+}

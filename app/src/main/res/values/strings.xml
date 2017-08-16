@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">AU Press</string>
+    <string name="app_name">Scour</string>
+    <string name="book_list">All books</string>
+    <string name="search_hint">Type here to search all books...</string>
+    <string name="description">App description will go here</string>
+    <string name="footer_text">A service of the Andrews University Press</string>
+    <string name="search_titles">Search by Title</string>
+    <string name="home_icon">Home</string>
 </resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:AUPress="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/search"
+          android:title="@string/app_name"
+          android:icon="@drawable/ic_search"
+          AUPress:showAsAction="always"
+          AUPress:actionViewClass="android.support.v7.widget.SearchView" />
+    <item android:id="@+id/home"
+          android:title="@string/home_icon"
+          android:icon="@drawable/ic_home"
+          AUPress:showAsAction="withText" />
+
+</menu>
