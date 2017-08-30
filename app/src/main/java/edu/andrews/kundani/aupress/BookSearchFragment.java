@@ -1,13 +1,10 @@
 package edu.andrews.kundani.aupress;
 
-import android.app.ActionBar;
-import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -16,25 +13,22 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.content.Intent;
+import android.widget.Toast;
 import java.util.ArrayList;
-
-import static android.R.id.list;
 
 
 public class BookSearchFragment extends ListFragment {
     //list_layout of bugs
     private ArrayList<Book> mBooks;
 
-    private Callbacks mCallbacks;
+    //private Callbacks mCallbacks;
 
-    /**Tag to log messages**/
+    /**
+     * Tag to log messages
+     **/
     public static final String TAG = "BookSearchFragment";
 
     //search query
@@ -57,26 +51,40 @@ public class BookSearchFragment extends ListFragment {
         setHasOptionsMenu(true);
     }
 
-    public void doSearch(String q){
+    public void doSearch(String q) {
         mBooks = BookList.getInstance(getActivity()).getResults(q);
 
         //adapter
         BookAdapter adapter = new BookAdapter(mBooks);
         setListAdapter(adapter);
 
+        //message for books found
+        //if none
+        if (mBooks.isEmpty()) {
+            Toast.makeText(getActivity(), "No results", Toast.LENGTH_LONG).show();
+        }
+
+        //if more than 0
+        else if (mBooks.size() > 0) {
+            Toast.makeText(getActivity(), "Found " + mBooks.size() + " Results",
+                    Toast.LENGTH_LONG).show();
+        }
+
     }
 
-    /**Action bar**/
+    /**
+     * Action bar
+     **/
     @Override
-    public void onCreateOptionsMenu(Menu menu,MenuInflater inflater ) {
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         super.onCreateOptionsMenu(menu, inflater);
-       inflater.inflate(R.menu.options_menu, menu);
+        inflater.inflate(R.menu.options_menu, menu);
 
         MenuItem searchItem = menu.findItem(R.id.search);
         SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         //hint
         searchView.setQueryHint("Search books");
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 doSearch(query);
@@ -85,22 +93,24 @@ public class BookSearchFragment extends ListFragment {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                Log.i(TAG, "User searched for"+ newText);
+                Log.i(TAG, "User searched for" + newText);
                 return false;
-                }
-            });
+            }
+        });
     }
 
-    /**book adapter**/
+    /**
+     * book adapter
+     **/
     private class BookAdapter extends ArrayAdapter<Book> {
-        public BookAdapter (ArrayList<Book> books) {
+        public BookAdapter(ArrayList<Book> books) {
             super(getActivity(), 0, books);
         }
 
         //view for individual book goes here...
         public View getView(int position, View convertView, ViewGroup parent) {
             //things
-            if(null == convertView) {
+            if (null == convertView) {
                 convertView = getActivity().getLayoutInflater().
                         inflate(R.layout.list_item_book, null);
             }
@@ -133,30 +143,52 @@ public class BookSearchFragment extends ListFragment {
         }
     }
 
+
+    /**
+     * Creates book list view
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return the list view
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_book_list, container, false);
 
         //ListView
-        ListView listView = (ListView) v.findViewById(list);
+        //ListView listView = (ListView) v.findViewById(android.R.id.list);
 
         return v;
+    }
+
+    @Override
+    public void onListItemClick(ListView listView, View v, int position, long id) {
+        super.onListItemClick(listView, v, position, id);
+
+        String selection = listView.getItemAtPosition(position).toString();
+        Toast.makeText(getActivity(), "You selected " + selection, Toast.LENGTH_LONG).show();
+
+        Log.d(TAG, "Clicked on:" + selection);
+
+        Intent i = new Intent(getActivity(), BookDetails.class);
+        startActivity(i);
     }
 
     public void onResume() {
         super.onResume();
         //((BookAdapter)getListAdapter().notifyDataSetChanged();
     }
-
+/***
     public interface Callbacks {
         void onBookSelected(Book book);
     }
 
-    /**@Override
+    @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        mCallbacks = (Callbacks)context;
+        mCallbacks = (Callbacks) context;
     }
 
     @Override
@@ -164,5 +196,6 @@ public class BookSearchFragment extends ListFragment {
         super.onDetach();
         mCallbacks = null;
     }**/
-
 }
+
+

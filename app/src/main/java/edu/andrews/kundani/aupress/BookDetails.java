@@ -10,19 +10,19 @@ import android.widget.TextView;
 
 public class BookDetails extends AppCompatActivity {
 
-    private TextView titleTextView;
-    private TextView authorTextView;
-    private TextView isbnTextView;
-    private TextView priceTextView;
+    TextView titleTextView;
+    TextView authorTextView;
+    TextView isbnTextView;
+    TextView priceTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_book);
 
-        //titleTextView = (TextView) findViewById(R.id.titleTV);
-        //authorTextView = (TextView) findViewById(R.id.authorTV);
-       // isbnTextView = (TextView) findViewById(R.id.isbnTV);
-       // priceTextView = (TextView) findViewById(R.id.priceTV);
+        titleTextView = (TextView) findViewById(R.id.titleTV);
+        authorTextView = (TextView) findViewById(R.id.authorTV);
+        isbnTextView = (TextView) findViewById(R.id.isbnTV);
+        priceTextView = (TextView) findViewById(R.id.priceTV);
     }
 }

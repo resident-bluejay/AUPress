@@ -51,13 +51,22 @@
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
             <meta-data android:name="android.app.searchable"
-                       android:resource="@xml/searchable"/>
+                       android:resource="@xml/searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.andrews.kundani.aupress.MainActivity" />
         </activity>
 
         <!-- let's see what their words are worth -->
 
-        <activity android:name=".BookSearchActivity">
-                  <!--android:launchMode="singleTop"-->
+        <activity
+            android:name=".BookSearchActivity"
+            android:parentActivityName="edu.andrews.kundani.aupress.MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.andrews.kundani.aupress.MainActivity" />
+
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
@@ -66,23 +75,32 @@
         <!-- the unburnt, the breaker of chains -->
 
         <activity android:name=".BookDetails">
-                  <!--android:launchMode="singleTop"-->
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <!-- you make brooding look good -->
-        <activity android:name=".TitleSearchActivity">
-            <!--android:launchMode="singleTop"-->
+        <activity android:name=".TitleSearchActivity"
+                  android:parentActivityName="edu.andrews.kundani.aupress.MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.andrews.kundani.aupress.MainActivity" />
+
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
         <!-- explosions in the sky, your hand in mine -->
-        <activity android:name=".AuthorSearchActivity">
-            <!--android:launchMode="singleTop"-->
+        <activity android:name=".AuthorSearchActivity"
+                  android:parentActivityName="edu.andrews.kundani.aupress.MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.andrews.kundani.aupress.MainActivity" />
+
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>

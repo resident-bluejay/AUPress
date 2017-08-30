@@ -4,7 +4,7 @@
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent"
-                                             android:background="@color/off_white">
+                                             android:background="@color/white">
 
     <ImageView
         android:layout_width="352dp"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.78"/>
 
     <TextView
-        android:text="TextView"
+        android:text="bookTitle"
         android:layout_width="352dp"
         android:layout_height="56dp"
         android:id="@+id/titleTV"
@@ -43,7 +43,7 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
-        android:text="TextView"
+        android:text="bookAuthor"
         android:layout_width="352dp"
         android:layout_height="60dp"
         android:id="@+id/authorTV"
@@ -60,7 +60,7 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
-        android:text="TextView"
+        android:text="bookPrice"
         android:layout_width="352dp"
         android:layout_height="60dp"
         android:id="@+id/isbnTV"
@@ -78,7 +78,7 @@
         app:layout_constraintVertical_bias="0.0"/>
 
     <TextView
-        android:text="TextView"
+        android:text="publisher?"
         android:layout_width="350dp"
         android:layout_height="57dp"
         android:id="@+id/priceTV"

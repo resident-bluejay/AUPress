@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -84,6 +85,18 @@ public class BookListFragment extends ListFragment {
 
         //adapter?
         BookAdapter adapter = new BookAdapter(mBooks);
+
+        //message for books found
+        //if none
+        if (mBooks.isEmpty()){
+            Toast.makeText(getActivity(), "No results", Toast.LENGTH_LONG).show();
+        }
+
+        //if more than 0
+        else if (mBooks.size() > 0){
+            Toast.makeText(getActivity(), "Found " + mBooks.size() + " Results",
+                    Toast.LENGTH_LONG).show();
+        }
         setListAdapter(adapter);
     }
 

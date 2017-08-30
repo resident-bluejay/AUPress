@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="edu.andrews.kundani.aupress.MainActivity"
-    android:background="@color/light_blue" >
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:orientation="vertical"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/au_blue" >
 
     <!--TextView
         android:layout_width="138dp"
@@ -64,7 +62,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintBottom_toTopOf="@+id/diffSearchView"
         android:layout_marginBottom="8dp"
-
         tools:typeface="serif"
         app:layout_constraintVertical_bias="0.0"
         app:layout_constraintHorizontal_bias="0.55"/>
@@ -92,7 +89,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/book_image"
         android:id="@+id/bookSearchImageButton"
-        android:backgroundTint="@color/au_gold"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="8dp"
@@ -103,15 +100,14 @@
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp"
-        app:layout_constraintHorizontal_bias="0.69"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintVertical_bias="0.027"/>
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/person_image"
         android:id="@+id/authorSearchImageButton"
-        android:backgroundTint="@color/au_gold"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="8dp"
@@ -122,15 +118,15 @@
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintHorizontal_bias="0.697"
+        app:layout_constraintVertical_bias="0.037"/>
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/key_image"
         android:id="@+id/keywordSearchImageButton"
-        android:backgroundTint="@color/au_gold"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="8dp"
@@ -141,16 +137,16 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintVertical_bias="0.0"/>
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintVertical_bias="0.043"/>
 
     <SearchView
-        android:layout_width="346dp"
-        android:layout_height="52dp"
+        android:layout_width="289dp"
+        android:layout_height="39dp"
         android:id="@+id/diffSearchView"
         android:iconifiedByDefault="false"
         android:queryHint="@string/search_hint"
-        android:background="@color/au_gold"
+        android:background="@drawable/bg_rounded"
         android:saveEnabled="true"
         style="@android:style/Theme.Holo.Wallpaper"
         app:layout_constraintRight_toRightOf="parent"
@@ -163,8 +159,8 @@
         android:layout_marginStart="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginLeft="16dp"
-        />
-
+        app:layout_constraintVertical_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.594"/>
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -173,6 +169,7 @@
         android:orientation="horizontal"
         tools:layout_editor_absoluteY="20dp"
         tools:layout_editor_absoluteX="0dp"/>
+
 
 
 </android.support.constraint.ConstraintLayout>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:AUPress="http://schemas.android.com/apk/res-auto">
+      xmlns:AUPress="http://schemas.android.com/apk/res-auto"
+      xmlns:androids="http://schemas.android.com/tools">
     <item android:id="@+id/search"
           android:title="@string/app_name"
           android:icon="@drawable/ic_search"

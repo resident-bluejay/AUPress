@@ -1,5 +1,6 @@
 package edu.andrews.kundani.aupress;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.support.v4.view.MenuItemCompat;
@@ -14,20 +15,18 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import static android.R.id.list;
 
-/**
- * Created by resident_bluejay on 8/16/17.
- */
 
 public class AuthorSearchFragment extends ListFragment {
     //list_layout of bugs
     private ArrayList<Book> mBooks;
 
-    private BookSearchFragment.Callbacks mCallbacks;
+    //private Callbacks mCallbacks;
 
     /**Tag to log messages**/
     public static final String TAG = "AuthorSearchFragment";
@@ -57,6 +56,19 @@ public class AuthorSearchFragment extends ListFragment {
 
         //adapter
         BookAdapter adapter = new BookAdapter(mBooks);
+
+        //message for books found
+        //if none
+        if (mBooks.isEmpty()){
+            Toast.makeText(getActivity(), "No results", Toast.LENGTH_LONG).show();
+        }
+
+        //if more than 0
+        else if (mBooks.size() > 0){
+            Toast.makeText(getActivity(), "Found " + mBooks.size() + " Results",
+                    Toast.LENGTH_LONG).show();
+        }
+
         setListAdapter(adapter);
 
     }
@@ -137,5 +149,12 @@ public class AuthorSearchFragment extends ListFragment {
         ListView listView = (ListView) v.findViewById(list);
 
         return v;
+    }
+
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+        Intent i = new Intent(getActivity(), BookDetails.class);
+        startActivity(i);
     }
 }

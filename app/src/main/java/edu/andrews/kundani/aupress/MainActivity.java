@@ -103,39 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**@Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.options_menu, menu);
-        MenuItem searchItem = menu.findItem(R.id.search);
-
-        //set searchable configuration
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        //hint
-        searchView.setQueryHint("Search books");
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                //send query to be searched
-                //Intent intent = new Intent(MainActivity.this, SearchActivity.class);
-                Intent intent = new Intent(MainActivity.this, BookSearchActivity.class);
-                intent.putExtra("query", query);
-                startActivity(intent);
-
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                Log.i(TAG, "User searched for"+ newText);
-                return false;
-            }
-        });
-        return true;
-    }**/
-
-
 }
 
 
