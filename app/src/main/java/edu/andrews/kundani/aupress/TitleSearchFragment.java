@@ -153,7 +153,25 @@ public class TitleSearchFragment extends ListFragment {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Intent i = new Intent(getActivity(), BookDetails.class);
+        Book book = (Book) (getListAdapter().getItem(position));
+
+        String selection = book.getBookTitle();
+        Toast.makeText(getActivity(), "You selected " + selection, Toast.LENGTH_LONG).show();
+
+        //LOG message
+        Log.d(TAG, "Clicked on:" + selection);
+
+        //put book info in Bundle to send to BookDetailsFragment
+        Bundle extras = new Bundle();
+        extras.putString("EXTRA_TITLE", book.getBookTitle());
+        extras.putString("EXTRA_AUTHOR", book.getAuthor());
+        extras.putString("EXTRA_ISBN", book.getISBN());
+        extras.putDouble("EXTRA_LIST_PRICE", book.getListPrice());
+
+        Intent i = new Intent(getActivity(), BookDetailsFragment.class);
+        //something
+        i.putExtras(extras);
+
         startActivity(i);
     }
 }

@@ -1,9 +1,15 @@
 <resources>
     <string name="app_name">Scour</string>
     <string name="book_list">All books</string>
-    <string name="search_hint">Type here to search all books...</string>
+    <string name="search_hint">Search all...</string>
     <string name="description">App description will go here</string>
     <string name="footer_text">A service of the Andrews University Press</string>
-    <string name="search_titles">Search by Title</string>
+    <string name="search_titles">Search Titles</string>
+    <string name="search_authors">Search Authors</string>
     <string name="home_icon">Home</string>
+    <string-array name="country_arrays">
+        <item>Title</item>
+        <item>Author</item>
+        <item>Keyword</item>
+    </string-array>
 </resources>

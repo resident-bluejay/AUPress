@@ -1,6 +1,5 @@
 package edu.andrews.kundani.aupress;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -167,12 +166,27 @@ public class BookSearchFragment extends ListFragment {
     public void onListItemClick(ListView listView, View v, int position, long id) {
         super.onListItemClick(listView, v, position, id);
 
-        String selection = listView.getItemAtPosition(position).toString();
+
+        Book book = (Book) (getListAdapter().getItem(position));
+
+        String selection = book.getBookTitle();
         Toast.makeText(getActivity(), "You selected " + selection, Toast.LENGTH_LONG).show();
 
         Log.d(TAG, "Clicked on:" + selection);
 
-        Intent i = new Intent(getActivity(), BookDetails.class);
+        //Intent i = new Intent(getActivity(), BookDetailsFragment.class);
+
+        //put book info in Bundle to send to BookDetailsFragment
+        Bundle extras = new Bundle();
+        extras.putString("EXTRA_TITLE", book.getBookTitle());
+        extras.putString("EXTRA_AUTHOR", book.getAuthor());
+        extras.putString("EXTRA_ISBN", book.getISBN());
+        extras.putDouble("EXTRA_LIST_PRICE", book.getListPrice());
+
+        Intent i = new Intent(getActivity(), BookDetailsFragment.class);
+        //something
+        i.putExtras(extras);
+
         startActivity(i);
     }
 

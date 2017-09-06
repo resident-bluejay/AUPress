@@ -74,7 +74,7 @@
 
         <!-- the unburnt, the breaker of chains -->
 
-        <activity android:name=".BookDetails">
+        <activity android:name=".BookDetailsFragment">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>

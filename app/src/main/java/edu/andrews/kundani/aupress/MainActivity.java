@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     ImageButton keywordSearchButton;
 
     /**Empty query**/
-    String blankQuery = "";
+    String blankQuery = "thisisnotaquery";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,15 +91,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //configure keyword search image button
-        keywordSearchButton = (ImageButton) findViewById(R.id.keywordSearchImageButton);
+        /**keywordSearchButton = (ImageButton) findViewById(R.id.keywordSearchImageButton);
         keywordSearchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
                 Intent intent = new Intent (MainActivity.this, BookSearchActivity.class);
-                //intent.putExtra("query", blankQuery);
+                intent.putExtra("query", blankQuery);
                 startActivity(intent);
             }
-        });
+        });**/
 
     }
 
