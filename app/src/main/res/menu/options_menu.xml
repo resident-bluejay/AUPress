@@ -11,5 +11,9 @@
           android:title="@string/home_icon"
           android:icon="@drawable/ic_home"
           AUPress:showAsAction="withText" />
+    <item android:id="@+id/cart"
+          android:title="View Cart"
+          android:icon="@drawable/ic_shopping_cart_black_24dp"
+          AUPress:showAsAction="never" />
 
 </menu>

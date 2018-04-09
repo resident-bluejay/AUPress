@@ -7,9 +7,13 @@
     <string name="search_titles">Search Titles</string>
     <string name="search_authors">Search Authors</string>
     <string name="home_icon">Home</string>
-    <string-array name="country_arrays">
+    <string-array name="choice_arrays">
         <item>Title</item>
         <item>Author</item>
         <item>Keyword</item>
     </string-array>
+    <string name="book_website_link"><a href="https://universitypress.andrews.edu/">
+        Find this book on our webpage
+    </a></string>
+    <string name="cart_items">Cart: </string>
 </resources>

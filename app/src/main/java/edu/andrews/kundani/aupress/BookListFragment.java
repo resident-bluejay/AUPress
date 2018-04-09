@@ -72,7 +72,7 @@ public class BookListFragment extends ListFragment {
         //View v = inflater.inflate(R.layout.list_layout, container, false);
 
         //ListView
-        ListView listView = (ListView) v.findViewById(android.R.id.list);
+        //ListView listView = (ListView) v.findViewById(android.R.id.list);
 
         return v;
     }
@@ -80,10 +80,9 @@ public class BookListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //getActivity().setTitle("Books");
         mBooks = BookList.getInstance(getActivity()).getBooks();
 
-        //adapter?
+        //adapter
         BookAdapter adapter = new BookAdapter(mBooks);
 
         //message for books found
@@ -100,13 +99,6 @@ public class BookListFragment extends ListFragment {
         setListAdapter(adapter);
     }
 
-    /*@Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
-        Book book = (Book) (getListAdapter()).getItem(position);
-
-        mCallbacks.onBugSelected(bug)
-    }*/
-
     public void onResume() {
         super.onResume();
         //((BookAdapter)getListAdapter().notifyDataSetChanged();
@@ -116,22 +108,5 @@ public class BookListFragment extends ListFragment {
         void onBookSelected(Book book);
     }
 
-    //private Callbacks mCallbacks;
-
-   /* @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mCallbacks = (Callbacks)context;
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mCallbacks = null;
-    }
-
-    public void updateUI() {
-        ((BookAdapter)getListAdapter()).notifyDataSetChanged();
-    }*/
 
 }

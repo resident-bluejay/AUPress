@@ -23,8 +23,6 @@ public class BookSearchFragment extends ListFragment {
     //list_layout of bugs
     private ArrayList<Book> mBooks;
 
-    //private Callbacks mCallbacks;
-
     /**
      * Tag to log messages
      **/
@@ -32,6 +30,9 @@ public class BookSearchFragment extends ListFragment {
 
     //search query
     String query;
+
+    //search key
+    int search_key;
 
     public BookSearchFragment() {
         //constructor
@@ -41,26 +42,46 @@ public class BookSearchFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Intent intent = getActivity().getIntent();
+        Bundle bundle = intent.getExtras();
 
-        //get search word from the main activity
-        query = getActivity().getIntent().getStringExtra("query");
-        doSearch(query);
+        query = bundle.getString("query");
+        search_key = bundle.getInt("searchIndex");
+
+        doSearch(query, search_key);
 
         //set up action bar
         setHasOptionsMenu(true);
     }
 
-    public void doSearch(String q) {
-        mBooks = BookList.getInstance(getActivity()).getResults(q);
+    /**
+     *
+     * @param q The search word/s
+     * @param k key that determines which category to search
+     */
+    public void doSearch(String q, int k) {
+
+        //search by title
+        if(k == 0)
+            mBooks = BookList.getInstance(getActivity()).getTitleResults(q);
+        //search by author
+        else if(k == 1)
+            mBooks = BookList.getInstance(getActivity()).getAuthorResults(q);
+        //search by keyword
+        else if(k == 2)
+            mBooks = BookList.getInstance(getActivity()).getResults(q);
+        //get all books
+        else
+            mBooks = BookList.getInstance(getActivity()).getBooks();
 
         //adapter
         BookAdapter adapter = new BookAdapter(mBooks);
         setListAdapter(adapter);
 
         //message for books found
-        //if none
+        //if none return "No results'
         if (mBooks.isEmpty()) {
-            Toast.makeText(getActivity(), "No results", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "No results", Toast.LENGTH_SHORT).show();
         }
 
         //if more than 0
@@ -86,7 +107,7 @@ public class BookSearchFragment extends ListFragment {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                doSearch(query);
+                doSearch(query, search_key);
                 return false;
             }
 
@@ -96,6 +117,7 @@ public class BookSearchFragment extends ListFragment {
                 return false;
             }
         });
+
     }
 
     /**
@@ -170,11 +192,9 @@ public class BookSearchFragment extends ListFragment {
         Book book = (Book) (getListAdapter().getItem(position));
 
         String selection = book.getBookTitle();
-        Toast.makeText(getActivity(), "You selected " + selection, Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(), "You selected " + selection, Toast.LENGTH_SHORT).show();
 
         Log.d(TAG, "Clicked on:" + selection);
-
-        //Intent i = new Intent(getActivity(), BookDetailsFragment.class);
 
         //put book info in Bundle to send to BookDetailsFragment
         Bundle extras = new Bundle();
@@ -184,7 +204,7 @@ public class BookSearchFragment extends ListFragment {
         extras.putDouble("EXTRA_LIST_PRICE", book.getListPrice());
 
         Intent i = new Intent(getActivity(), BookDetailsFragment.class);
-        //something
+        //send bundle
         i.putExtras(extras);
 
         startActivity(i);
@@ -192,24 +212,8 @@ public class BookSearchFragment extends ListFragment {
 
     public void onResume() {
         super.onResume();
-        //((BookAdapter)getListAdapter().notifyDataSetChanged();
-    }
-/***
-    public interface Callbacks {
-        void onBookSelected(Book book);
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mCallbacks = (Callbacks) context;
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        mCallbacks = null;
-    }**/
 }
 
 

@@ -12,7 +12,7 @@ public class BookList {
     /**Instance variable**/
     private static BookList anInstance;
 
-    //List of bugs
+    //List of books
     private ArrayList<Book> mBooks;
 
     //Reference info on app environment?
@@ -42,7 +42,7 @@ public class BookList {
         }
     }
 
-    //comment comment comment
+    //create an instance of list
     public static BookList getInstance (Context c) {
         if(anInstance == null)
             anInstance = new BookList(c.getApplicationContext());

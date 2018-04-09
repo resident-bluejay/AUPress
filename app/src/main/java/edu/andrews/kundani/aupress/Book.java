@@ -4,9 +4,10 @@ package edu.andrews.kundani.aupress;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.UUID;
 
-public class Book {
+public class Book implements Serializable {
 
     //Unique ID for a book
     private UUID mUUID;
@@ -28,7 +29,7 @@ public class Book {
 
 
     public Book () {
-        //random unique ID for book?????
+        //random unique ID for book
         mUUID = UUID.randomUUID();
     }
 
@@ -39,7 +40,7 @@ public class Book {
      * @param isbn          Resource id for book ISBN
      * @param listPrice    Resource id for book price
      */
-    public Book(String title, String author, String isbn, int listPrice) {
+    public Book(String title, String author, String isbn, double listPrice) {
         mTitle = title;
         mAuthor = author;
         mISBN = isbn;
