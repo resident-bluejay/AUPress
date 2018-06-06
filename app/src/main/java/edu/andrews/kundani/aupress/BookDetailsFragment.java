@@ -86,13 +86,14 @@ public class BookDetailsFragment extends AppCompatActivity {
         addToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //add book to array
+                //add book to array/database
                 db.addCartBook(book);
                 Log.i(TAG, "user added: " + book.getBookTitle()
-                +"/n Total: " );
+                +"Price: " + book.getListPrice() );
             }
         });
 
+        //configure button that will display the shopping cart
         viewCartTextView = (TextView) findViewById(R.id.cart_text_veiw);
         viewCartTextView.setOnClickListener(new View.OnClickListener() {
             @Override

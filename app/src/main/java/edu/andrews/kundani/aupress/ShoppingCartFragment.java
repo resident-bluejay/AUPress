@@ -1,25 +1,31 @@
 package edu.andrews.kundani.aupress;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import android.support.v4.app.ListFragment;
+
+/*
+Hosts the fragment that displays books in the shopping cart
+ */
 
 public class ShoppingCartFragment extends ListFragment {
 
 
+    //arraylist of books
     private ArrayList<CartBook> mCartBooks = new ArrayList<>();
 
-    double totalPrice;
-
-    SQLiteDbHandler db = new SQLiteDbHandler(getActivity());
-
-    double total = getCount();
+    //reference to the price
+    double totalPrice = 0;
 
     public ShoppingCartFragment() {
         //constructor
@@ -32,7 +38,7 @@ public class ShoppingCartFragment extends ListFragment {
 
         //view for individual book goes here...
         public View getView(int position, View convertView, ViewGroup parent) {
-            //things
+            //inflate view
             if(null == convertView) {
                 convertView = getActivity().getLayoutInflater().
                         inflate(R.layout.shopping_cart_item, null);
@@ -46,7 +52,7 @@ public class ShoppingCartFragment extends ListFragment {
                     (TextView) convertView.findViewById(R.id.shopping_cart_title_textView);
             titleTextView.setText(book.getBookTitle());
 
-            //set page number
+            //set price number
             TextView priceTextView =
                     (TextView) convertView.findViewById(R.id.shopping_cart_price_textView);
             priceTextView.setText("$" + book.getListPrice());
@@ -59,19 +65,26 @@ public class ShoppingCartFragment extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_book_list, container, false);
-        //View v = inflater.inflate(R.layout.list_layout, container, false);
+        View v = inflater.inflate(R.layout.shopping_cart_frame_layout, container, false);
 
         //ListView
         ListView listView = (ListView) v.findViewById(android.R.id.list);
 
-        //TextView totalTextVIew = (TextView) v.findViewById(R.id.total_textView);
-        //totalTextVIew.setText("$ " + total);
 
+        double total = getCount();
+
+        DecimalFormat df = new DecimalFormat();
+
+        //checkout button
+        TextView totalTextVIew = (TextView) v.findViewById(R.id.btnAddMovie);
+        totalTextVIew.setText("TOTAL: $ " + df.format(total));
 
         return v;
     }
 
+    /*
+    returns the total price for the books in shopping cart
+     */
     public Double getCount(){
         //initialize
         for (CartBook mCartBook: mCartBooks) {
@@ -84,17 +97,16 @@ public class ShoppingCartFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //get an instance on SHoopingCartList
         mCartBooks = ShoppingCartList.getInstance(getActivity()).getBooks();
 
-        //double total = getCount();
-
-        //adapter?
+        //adapter
         BookAdapter adapter = new BookAdapter(mCartBooks);
-
         setListAdapter(adapter);
 
         //set up action bar
         setHasOptionsMenu(true);
+
     }
 
 }

@@ -47,6 +47,9 @@ public class SQLiteDbHandler extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
+    /*
+    Deletes book from shopping cart database
+     */
     public void onDelete(CartBook book) {
         //get database reference
         SQLiteDatabase db = this.getWritableDatabase();
@@ -56,6 +59,9 @@ public class SQLiteDbHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    /*
+    Get only one book from the shopping cart
+     */
     public CartBook getCartBooK(int id) {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, COLUMNS,
@@ -80,6 +86,10 @@ public class SQLiteDbHandler extends SQLiteOpenHelper {
         return cartBook;
 
     }
+
+    /*
+    Returns all books in the shopping cart in an array list
+     */
 
     public ArrayList<CartBook> allCartBooks() {
 
@@ -106,6 +116,10 @@ public class SQLiteDbHandler extends SQLiteOpenHelper {
         return mCartBooks;
     }
 
+    /**
+     * Adds some book into database
+     * @param cartBook
+     */
     public void addCartBook (CartBook cartBook) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -118,6 +132,11 @@ public class SQLiteDbHandler extends SQLiteOpenHelper {
         db.close();
     }
 
+    /**
+     * Updates shopping cart
+     * @param cartBook a book in the shopping cart
+     * @return updated database
+     */
     private int updateCartBook (CartBook cartBook) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

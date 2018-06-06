@@ -2,10 +2,6 @@ package edu.andrews.kundani.aupress;
 
 import java.util.UUID;
 
-/**
- * Created by resident_bluejay on 4/2/18.
- */
-
 public class CartBook {
     //book title
     private String mTitle;

@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 
-
+/**
+ * Host Shopping Cart Fragment
+ */
 public class ShoppingCartActivity extends SingleFragmentActivity{
 
     @Override

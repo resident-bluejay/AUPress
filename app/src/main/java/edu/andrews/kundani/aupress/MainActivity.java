@@ -108,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //button that leads to shopping cart from the main screen
         cartItemsView = (TextView) findViewById(R.id.cart_items_view);
         cartItemsView.setText("Cart: " + Integer.toString(cart_number) + " items");
         cartItemsView.setOnClickListener(new View.OnClickListener() {
