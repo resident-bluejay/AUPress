@@ -10,10 +10,6 @@ import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
 import java.util.UUID;
 
-/**
- * Created by resident_bluejay on 8/14/17.
- */
-
 public class BookDetailsActivity extends FragmentActivity
 {
 
